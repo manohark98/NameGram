@@ -1,0 +1,265 @@
+/* Comic themed styles for Namegram */
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #f9f5e3;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f0e6c5' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Comic title style */
+.comic-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    letter-spacing: 1px;
+    transform: rotate(-2deg);
+    margin-bottom: 30px;
+}
+
+/* Image container */
+.image-container {
+    max-width: 450px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+/* Name display container */
+.name-container {
+    background-color: white;
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.name-container:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.name-text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+/* Generate button */
+.generate-btn {
+    background-color: #4ecdc4;
+    color: white;
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 0 #1a535c;
+    position: relative;
+    outline: none;
+}
+
+.generate-btn:hover {
+    background-color: #1a535c;
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #1a535c;
+}
+
+.generate-btn:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+/* Comic message */
+.comic-message {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* About Engine Section */
+.about-engine {
+    background-color: #f3f8ff;
+    border: 2px dashed #4ecdc4;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a535c;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.model-icon-container {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.model-icon {
+    animation: rotate-icon 10s linear infinite;
+    width: 40px;
+    height: 40px;
+}
+
+.engine-details {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-family: monospace;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.model-stat {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.loss-value {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 3px 0 3px 15px;
+    font-family: monospace;
+}
+
+.not-bad {
+    color: #4ecdc4;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Comic Neue', cursive;
+}
+
+@keyframes rotate-icon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animation classes */
+.shake-animation {
+    animation: shake 0.5s ease-in-out;
+}
+
+.pop-in {
+    animation: popIn 0.5s ease-in-out;
+}
+
+.bounce {
+    animation: bounce 0.5s ease infinite;
+}
+
+.pulse {
+    animation: pulse 1s ease;
+}
+
+.generated-name {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.sparkle-effect {
+    position: absolute;
+    top: -10px;
+    right: 25%;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: sparkle 1.5s ease infinite;
+}
+
+.sparkle-effect:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: sparkle 1.5s ease infinite 0.3s;
+}
+
+/* Keyframes */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+    100% { opacity: 0; transform: scale(0.5) rotate(360deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .comic-title {
+        font-size: 2.5rem;
+    }
+    
+    .name-text {
+        font-size: 1.5rem;
+    }
+    
+    .generate-btn {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+}

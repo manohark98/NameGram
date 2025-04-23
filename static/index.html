@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namegram - Comic Name Generator</title>
+    
+    <!-- Google Fonts - Comic Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="comic-title mt-4 mb-4">Namegram</h1>
+                
+                <!-- Krishna Image -->
+                <div class="image-container mb-4">
+                    <img src="images/krishna_scene.png" alt="Krishna thinking 'Name?'" class="img-fluid">
+                </div>
+                
+                <!-- Name Display Area -->
+                <div id="name-display" class="name-container mb-4">
+                    <p class="name-text">Click the button to generate a name!</p>
+                </div>
+                
+                <!-- Generate Button -->
+                <button id="generate-btn" class="generate-btn mb-5">Generate Name!</button>
+                
+                <!-- Fun Message -->
+                <p class="comic-message">Let Krishna help you pick the perfect name!</p>
+                
+                <!-- About Engine Section -->
+                <div class="about-engine mt-4 mb-4">
+                    <h3 class="about-title">
+                        <div class="model-icon-container">
+                            <svg class="model-icon" viewBox="0 0 50 50">
+                                <!-- Neural Network Icon -->
+                                <circle cx="15" cy="15" r="3" fill="#3498db"/>
+                                <circle cx="15" cy="25" r="3" fill="#3498db"/>
+                                <circle cx="15" cy="35" r="3" fill="#3498db"/>
+                                
+                                <circle cx="25" cy="10" r="3" fill="#2ecc71"/>
+                                <circle cx="25" cy="20" r="3" fill="#2ecc71"/>
+                                <circle cx="25" cy="30" r="3" fill="#2ecc71"/>
+                                <circle cx="25" cy="40" r="3" fill="#2ecc71"/>
+                                
+                                <circle cx="35" cy="15" r="3" fill="#e74c3c"/>
+                                <circle cx="35" cy="25" r="3" fill="#e74c3c"/>
+                                <circle cx="35" cy="35" r="3" fill="#e74c3c"/>
+                                
+                                <!-- Connections between nodes -->
+                                <line x1="15" y1="15" x2="25" y2="10" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="15" x2="25" y2="20" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="15" x2="25" y2="30" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="15" x2="25" y2="40" stroke="#999" stroke-width="0.7"/>
+                                
+                                <line x1="15" y1="25" x2="25" y2="10" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="25" x2="25" y2="20" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="25" x2="25" y2="30" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="25" x2="25" y2="40" stroke="#999" stroke-width="0.7"/>
+                                
+                                <line x1="15" y1="35" x2="25" y2="10" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="35" x2="25" y2="20" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="35" x2="25" y2="30" stroke="#999" stroke-width="0.7"/>
+                                <line x1="15" y1="35" x2="25" y2="40" stroke="#999" stroke-width="0.7"/>
+                                
+                                <line x1="25" y1="10" x2="35" y2="15" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="10" x2="35" y2="25" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="10" x2="35" y2="35" stroke="#999" stroke-width="0.7"/>
+                                
+                                <line x1="25" y1="20" x2="35" y2="15" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="20" x2="35" y2="25" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="20" x2="35" y2="35" stroke="#999" stroke-width="0.7"/>
+                                
+                                <line x1="25" y1="30" x2="35" y2="15" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="30" x2="35" y2="25" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="30" x2="35" y2="35" stroke="#999" stroke-width="0.7"/>
+                                
+                                <line x1="25" y1="40" x2="35" y2="15" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="40" x2="35" y2="25" stroke="#999" stroke-width="0.7"/>
+                                <line x1="25" y1="40" x2="35" y2="35" stroke="#999" stroke-width="0.7"/>
+                            </svg>
+                        </div>
+                        Engine: MLP
+                    </h3>
+                    <div class="engine-details">
+                        <p class="model-stat">Parameters: 281,187</p>
+                        <p class="model-stat">Loss values:</p>
+                        <p class="loss-value">Train: 1.494</p>
+                        <p class="loss-value">Val: 1.514 <span class="not-bad">(Not bad)</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
