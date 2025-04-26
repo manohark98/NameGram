@@ -15,9 +15,4 @@ A fun and interactive name generator web application built with Flask that lets 
 - Collection of culturally meaningful Indian names
 - MLP (Multi-Layer Perceptron) engine with 281,187 parameters
 
-## Running the Application
-
-1. Click the "Run" button in Replit
-2. The application will start on port 5000
-3. Click "Generate Name" to get a new name suggestion!
 
