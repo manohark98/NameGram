@@ -1,5 +1,5 @@
 
-# Namegram - Comic Name Generator
+# Namegram - Name Generator
 
 A fun and interactive name generator web application built with Flask that lets Krishna help you pick the perfect name! 
 
