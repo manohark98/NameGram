@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Fetch random name from API
-            const response = await fetch('/api/generate-name');
+            const response = await fetch(`${window.location.origin}/api/generate-name`);
             
             if (!response.ok) {
                 throw new Error('Network response was not ok');

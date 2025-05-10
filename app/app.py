@@ -158,7 +158,7 @@ model = model  # ready for inference
 # ----------------------
 # Setup Flask app
 # ----------------------
-app = Flask(__name__, static_folder='static')
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
 CORS(app)
 
@@ -194,6 +194,10 @@ def generate_name():
 @app.route('/<path:path>')
 def static_files(path):
     return send_from_directory(app.static_folder, path)
+
+@app.errorhandler(404)
+def not_found(e):
+    return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
     #logging.basicConfig(level=logging.DEBUG)
