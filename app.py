@@ -188,7 +188,7 @@ def generate_name():
             break
         out.append(ix)
     name = ''.join(itos[i] for i in out)
-    logging.debug(f"Generated name: {name}")
+    #logging.debug(f"Generated name: {name}")
     return jsonify({'name': name})
 
 @app.route('/<path:path>')
@@ -196,5 +196,5 @@ def static_files(path):
     return send_from_directory(app.static_folder, path)
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.DEBUG)
+    #logging.basicConfig(level=logging.DEBUG)
     app.run(host='127.0.0.1', port=8000, debug=True)

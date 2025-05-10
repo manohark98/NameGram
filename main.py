@@ -1,5 +1,7 @@
-from app import app  # noqa: F401
+from flask import Flask
 
-if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000, debug=True)
-    #app.run()
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello World!"
